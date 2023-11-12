@@ -8,7 +8,6 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 
 const getTypeColor = (type) => {
-    // Define a mapping between Pokemon types and colors
     const typeColors = {
       normal: 'gray',
       fire: 'orange',
