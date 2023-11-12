@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Index from "./pages/index"
+import Pokemon from "./pages/pokemon"
+import About from './pages/about';
+import { Route, Routes } from 'react-router';
+import Topbar from './pages/topbar/topbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Topbar/>
+      <div style={{ margin: '20px' }}>
+      <Routes>
+        <Route path="/" element={<Index/>}/>
+        <Route path="/pokemon" element={<Pokemon/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Routes>
+      </div>
+     
     </div>
   );
 }
